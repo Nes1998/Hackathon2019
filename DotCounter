@@ -1,12 +1,18 @@
 
+import fong.hackathon.*;
+import fong.hackathon.java.ImageModify;
+
+
 public class FileDotCounter {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) 
+	{
+		
+		ImageModify im = new ImageModify("/home/ldap/fn8231/cs260/Aquaman_poster.jpg");
+		im.display();
 	}
 
 }
@@ -14,24 +20,38 @@ public class FileDotCounter {
 
 package fong.hackathon.java;
 
-import java.awt.Image;
+
+import java.awt.FlowLayout;
 import java.io.File;
 
-public class ImageModify {
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
-	public ImageModify() {
-		// TODO Auto-generated constructor stub
+public class ImageModify{
+	
+	private ImageIcon image;
+	private File pic;
+	public ImageModify(String fileName) 
+	{
+		image = new ImageIcon(fileName);
+		
 	}
 
-}
-
-package fong.hackathon.java;
-
-public class ImageCounter {
-
-	public ImageCounter() {
-		// TODO Auto-generated constructor stub
+	public void display()
+	{
+		JFrame frame =  new JFrame();
+		JLabel label = new JLabel(image);
+		frame.add(label);
+		frame.setLayout(new FlowLayout());
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 	}
 
+	public void countRed()
+	{
+		
+	}
+	
 }
 
