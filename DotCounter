@@ -13,9 +13,11 @@ public class FileDotCounter {
 		
 		ImageModify im = new ImageModify("/home/ldap/fn8231/cs260/Aquaman_poster.jpg");
 		im.display();
+		im.countColors();
 	}
 
 }
+
 
 
 package fong.hackathon.java;
